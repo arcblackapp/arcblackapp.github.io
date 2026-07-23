@@ -26,6 +26,7 @@
         --shadow: rgb(24 24 27 / 8%);
         --haru: #f3d6ca;
         --sudoku: #c8d8cb;
+        --security: #cbd7e8;
         --focus: #71717a;
       }
 
@@ -43,6 +44,7 @@
           --shadow: rgb(0 0 0 / 22%);
           --haru: #6f5148;
           --sudoku: #405b48;
+          --security: #3f536e;
           --focus: #a1a1aa;
         }
       }
@@ -150,6 +152,10 @@
 
       .app-card.sudoku {
         --card-tint: var(--sudoku);
+      }
+
+      .app-card.security {
+        --card-tint: var(--security);
       }
 
       .card-top {
@@ -397,6 +403,29 @@
           <div class="actions">
             <a class="button" href="./home/gamesudoku.html">게임 자세히 보기</a>
             <a class="button secondary" href="./privacy/gamesudoku.html">개인정보 처리방침</a>
+          </div>
+        </article>
+
+        <article class="app-card security">
+          <div class="card-top">
+            <img src="./securitycardz-icon.jpg" alt="보안카드 Z 앱 아이콘" class="app-icon" />
+            <div>
+              <p class="app-label">FINANCE</p>
+              <h2>보안카드 Z</h2>
+            </div>
+          </div>
+          <p class="description">
+            보안카드, 신용카드, 멤버십카드 정보를 암호화해 안전하게 관리하는 iPhone 앱입니다.
+          </p>
+          <ul class="features" aria-label="보안카드 Z 주요 기능">
+            <li>생체 인증</li>
+            <li>암호화 저장</li>
+            <li>iCloud 백업</li>
+            <li>광고 없음</li>
+          </ul>
+          <div class="actions">
+            <a class="button" href="./home/securitycardz.html">앱 자세히 보기</a>
+            <a class="button secondary" href="./privacy/securitycardz.html">개인정보 처리방침</a>
           </div>
         </article>
       </section>
