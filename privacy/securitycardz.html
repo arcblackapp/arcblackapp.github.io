@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f7f7f8" />
+    <meta name="description" content="보안카드 Z 개인정보 처리방침" />
+    <title>개인정보 처리방침 | 보안카드 Z</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", sans-serif;
+        font-synthesis: none;
+        --background: #f7f7f8;
+        --surface: #ffffff;
+        --foreground: #171717;
+        --muted: #52525b;
+        --border: #d4d4d8;
+        --accent: #3f3f46;
+        --focus: #71717a;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background: #18181b;
+          --surface: #27272a;
+          --foreground: #fafafa;
+          --muted: #d4d4d8;
+          --border: #52525b;
+          --accent: #e4e4e7;
+          --focus: #a1a1aa;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: var(--background);
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-width: 320px;
+        margin: 0;
+        color: var(--foreground);
+        background: var(--background);
+        font-size: 16px;
+        line-height: 1.75;
+        word-break: keep-all;
+        overflow-wrap: anywhere;
+      }
+
+      main {
+        width: min(820px, calc(100% - 32px));
+        margin: 40px auto;
+        padding: clamp(28px, 6vw, 64px);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: var(--surface);
+        box-shadow: 0 18px 60px rgb(0 0 0 / 8%);
+      }
+
+      header {
+        padding-bottom: 28px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 7vw, 3.25rem);
+        line-height: 1.15;
+        letter-spacing: -0.04em;
+      }
+
+      .app-name {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+        font-weight: 700;
+      }
+
+      .meta {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin: 24px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .meta li {
+        padding: 12px 14px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      .meta strong {
+        display: block;
+        margin-bottom: 2px;
+        color: var(--foreground);
+      }
+
+      .summary {
+        margin-top: 30px;
+        padding: 20px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+      }
+
+      .summary strong {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .summary ul {
+        margin-bottom: 0;
+      }
+
+      section {
+        padding-top: 36px;
+      }
+
+      h2 {
+        margin: 0 0 14px;
+        font-size: clamp(1.25rem, 4vw, 1.55rem);
+        line-height: 1.35;
+        letter-spacing: -0.02em;
+      }
+
+      p {
+        margin: 0 0 14px;
+      }
+
+      ul {
+        margin: 12px 0 18px;
+        padding-left: 1.4rem;
+      }
+
+      li + li {
+        margin-top: 6px;
+      }
+
+      a {
+        color: var(--accent);
+        font-weight: 700;
+        text-underline-offset: 3px;
+      }
+
+      a:focus-visible {
+        border-radius: 4px;
+        outline: 3px solid var(--focus);
+        outline-offset: 3px;
+      }
+
+      footer {
+        margin-top: 42px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 640px) {
+        main {
+          width: min(100% - 20px, 820px);
+          margin: 10px auto;
+          padding: 26px 20px 34px;
+          border-radius: 18px;
+        }
+
+        .meta {
+          grid-template-columns: 1fr;
+        }
+
+        section {
+          padding-top: 30px;
+        }
+      }
+
+      @media print {
+        :root {
+          color-scheme: light;
+          --background: #ffffff;
+          --surface: #ffffff;
+          --foreground: #000000;
+          --muted: #333333;
+          --border: #aaaaaa;
+          --accent: #000000;
+        }
+
+        body {
+          background: #ffffff;
+          font-size: 11pt;
+        }
+
+        main {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          box-shadow: none;
+        }
+
+        a {
+          color: #000000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">PRIVACY POLICY</p>
+        <h1>개인정보 처리방침</h1>
+        <p class="app-name">보안카드 Z</p>
+        <ul class="meta" aria-label="문서 정보">
+          <li><strong>최종 업데이트</strong>2026년 2월 2일</li>
+          <li>
+            <strong>문의</strong>
+            <a href="mailto:arcblack.app@gmail.com">arcblack.app@gmail.com</a>
+          </li>
+        </ul>
+        <div class="summary">
+          <strong>요약</strong>
+          <ul>
+            <li>앱 사용 기록을 수집하거나 사용자를 추적하지 않습니다.</li>
+            <li>광고 및 분석 SDK를 사용하지 않습니다.</li>
+            <li>카드 데이터는 암호화해 기기에 저장합니다.</li>
+            <li>사용자가 선택하면 Apple iCloud를 통해 데이터를 백업·복원할 수 있습니다.</li>
+          </ul>
+        </div>
+      </header>
+
+      <section aria-labelledby="policy-1">
+        <h2 id="policy-1">1. 처리하는 개인정보 항목</h2>
+        <p>
+          보안카드 Z(이하 “앱”)는 회원가입 없이 사용할 수 있으며, 앱 자체적으로 사용자의 개인정보를
+          수집하지 않습니다. 앱 사용 기록, 광고 식별자(IDFA), 기기 추적 정보도 수집하지 않습니다.
+        </p>
+        <ul>
+          <li>수집 항목: 없음</li>
+          <li>수집 방법: 해당 없음</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="policy-2">
+        <h2 id="policy-2">2. 카드 데이터의 저장 및 암호화</h2>
+        <p>
+          사용자가 앱에 입력하는 보안카드, 신용카드, 멤버십카드 정보는 앱 기능 제공을 위해 기기에
+          저장됩니다. 이 데이터는 암호화해 저장하며, 앱은 사용자의 동의 없이 외부 서버로 전송하지
+          않습니다.
+        </p>
+      </section>
+
+      <section aria-labelledby="policy-3">
+        <h2 id="policy-3">3. iCloud 백업 및 복원</h2>
+        <p>
+          사용자가 iCloud 백업·복원 기능을 사용하는 경우 앱 데이터는 사용자의 iCloud 계정을 통해
+          Apple의 iCloud 서비스로 백업·복원될 수 있습니다. 이 과정의 데이터 전송과 저장은 Apple의
+          정책 및 보안 체계에 따라 처리됩니다.
+        </p>
+        <ul>
+          <li>제공받는 자: Apple(iCloud)</li>
+          <li>목적: 기기 변경 및 복원 시 데이터 백업·복원</li>
+          <li>근거: 사용자의 선택</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="policy-4">
+        <h2 id="policy-4">4. 제3자 제공 및 위탁</h2>
+        <p>
+          앱은 사용자의 개인정보를 제3자에게 판매하거나 제공하지 않습니다. 광고 및 분석 SDK를
+          사용하지 않으며, 앱 사용 데이터를 외부 업체에 위탁 처리하지 않습니다.
+        </p>
+      </section>
+
+      <section aria-labelledby="policy-5">
+        <h2 id="policy-5">5. 개인정보 보유 및 이용기간</h2>
+        <p>
+          앱이 별도로 개인정보를 수집·보관하지 않으므로 법정 보관 항목이 존재하지 않습니다. 사용자가
+          앱에 저장한 카드 데이터는 사용자의 기기와, 사용 시 iCloud에 저장되며 앱 또는 데이터를
+          삭제하면 제거될 수 있습니다.
+        </p>
+      </section>
+
+      <section aria-labelledby="policy-6">
+        <h2 id="policy-6">6. 이용자의 권리</h2>
+        <p>
+          사용자는 앱에서 카드 데이터를 직접 추가·수정·삭제할 수 있습니다. iCloud 백업을 사용한 경우
+          Apple ID 및 iCloud 설정에서 저장 항목을 관리할 수 있습니다.
+        </p>
+      </section>
+
+      <section aria-labelledby="policy-7">
+        <h2 id="policy-7">7. 아동의 개인정보</h2>
+        <p>
+          앱은 만 14세 미만 아동을 대상으로 서비스를 제공하거나 아동의 개인정보를 의도적으로 수집하지
+          않습니다.
+        </p>
+      </section>
+
+      <section aria-labelledby="policy-8">
+        <h2 id="policy-8">8. 개인정보 처리방침 변경</h2>
+        <p>
+          본 방침은 앱 기능 또는 관련 법령과 정책의 변경에 따라 수정될 수 있습니다. 변경 사항은 이
+          페이지에 게시하고 상단의 최종 업데이트 날짜를 갱신합니다.
+        </p>
+      </section>
+
+      <section aria-labelledby="policy-9">
+        <h2 id="policy-9">9. 문의</h2>
+        <p>개인정보 처리방침에 관한 문의나 건의 사항은 아래 이메일로 접수할 수 있습니다.</p>
+        <p><a href="mailto:arcblack.app@gmail.com">arcblack.app@gmail.com</a></p>
+      </section>
+
+      <footer>© 2026 보안카드 Z. All rights reserved.</footer>
+    </main>
+  </body>
+</html>
