@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f4f4f0" />
+    <meta
+      name="description"
+      content="감정, 할 일, 계획을 한곳에 모아 오늘을 더 선명하게 기록하는 iPhone 앱 Haru."
+    />
+    <title>Haru | 아크블랙 앱</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", sans-serif;
+        font-synthesis: none;
+        --background: #f4f4f0;
+        --surface: #ffffff;
+        --foreground: #18181b;
+        --muted: #5f5f68;
+        --border: #d8d8d2;
+        --accent: #202024;
+        --button-text: #ffffff;
+        --soft: #f3d6ca;
+        --shadow: rgb(24 24 27 / 8%);
+        --focus: #71717a;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background: #18181b;
+          --surface: #27272a;
+          --foreground: #fafafa;
+          --muted: #d4d4d8;
+          --border: #52525b;
+          --accent: #f4f4f5;
+          --button-text: #18181b;
+          --soft: #6f5148;
+          --shadow: rgb(0 0 0 / 22%);
+          --focus: #a1a1aa;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: var(--background);
+      }
+
+      body {
+        min-width: 320px;
+        margin: 0;
+        color: var(--foreground);
+        background: var(--background);
+        font-size: 16px;
+        line-height: 1.75;
+        word-break: keep-all;
+        overflow-wrap: anywhere;
+      }
+
+      .shell {
+        width: min(900px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 28px 0 48px;
+      }
+
+      .back {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+        font-weight: 750;
+        text-decoration: none;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        margin-top: 18px;
+        padding: clamp(30px, 7vw, 68px);
+        border: 1px solid var(--border);
+        border-radius: 30px;
+        background: var(--surface);
+        box-shadow: 0 18px 50px var(--shadow);
+      }
+
+      .hero::after {
+        position: absolute;
+        top: -130px;
+        right: -100px;
+        width: 360px;
+        height: 360px;
+        border-radius: 50%;
+        background: var(--soft);
+        content: "";
+        opacity: 0.65;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .app-icon {
+        width: 94px;
+        height: 94px;
+        border-radius: 23px;
+        object-fit: cover;
+        box-shadow: 0 12px 28px var(--shadow);
+      }
+
+      .eyebrow {
+        margin: 26px 0 8px;
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(3rem, 10vw, 6.5rem);
+        line-height: 0.95;
+        letter-spacing: -0.07em;
+      }
+
+      .tagline {
+        max-width: 620px;
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: clamp(1.05rem, 3vw, 1.35rem);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 30px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 46px;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 17px;
+        border: 1px solid transparent;
+        border-radius: 12px;
+        background: var(--accent);
+        color: var(--button-text);
+        font-size: 0.92rem;
+        font-weight: 750;
+        text-decoration: none;
+      }
+
+      .button.secondary {
+        border-color: var(--border);
+        background: transparent;
+        color: var(--foreground);
+      }
+
+      .content {
+        padding: clamp(38px, 7vw, 68px) clamp(4px, 4vw, 34px) 0;
+      }
+
+      .lead {
+        margin: 0 0 48px;
+        font-size: clamp(1.16rem, 3vw, 1.4rem);
+        line-height: 1.7;
+      }
+
+      h2 {
+        margin: 0 0 18px;
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        letter-spacing: -0.04em;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .features li {
+        padding: 22px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--surface);
+      }
+
+      .features strong {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .features span {
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      .closing {
+        margin: 48px 0 0;
+        padding-top: 34px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+      }
+
+      footer {
+        display: flex;
+        gap: 18px;
+        justify-content: space-between;
+        margin-top: 58px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      footer a {
+        color: var(--foreground);
+        font-weight: 700;
+      }
+
+      a:focus-visible {
+        border-radius: 8px;
+        outline: 3px solid var(--focus);
+        outline-offset: 3px;
+      }
+
+      @media (max-width: 640px) {
+        .shell {
+          width: min(100% - 24px, 900px);
+        }
+
+        .hero {
+          border-radius: 22px;
+        }
+
+        .features {
+          grid-template-columns: 1fr;
+        }
+
+        footer {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <a class="back" href="../">← 전체 앱</a>
+
+      <header class="hero">
+        <div class="hero-content">
+          <img src="../haru-icon.png" alt="Haru 앱 아이콘" class="app-icon" />
+          <p class="eyebrow">LIFESTYLE FOR IPHONE</p>
+          <h1>Haru</h1>
+          <p class="tagline">감정, 할 일, 계획을 한곳에 모아 오늘을 더 선명하게 남겨보세요.</p>
+          <div class="actions">
+            <a
+              class="button"
+              href="https://apps.apple.com/kr/app/id6778261204"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              App Store에서 보기
+            </a>
+            <a class="button secondary" href="../privacy/haru.html">개인정보 처리방침</a>
+          </div>
+        </div>
+      </header>
+
+      <section class="content">
+        <p class="lead">
+          Haru는 오늘의 기분을 기록하고, 해야 할 일을 정리하고, 진행 중인 계획과 하루의 흐름을
+          한곳에서 돌아볼 수 있도록 만든 앱입니다.
+        </p>
+
+        <h2>주요 기능</h2>
+        <ul class="features">
+          <li><strong>감정 기록</strong><span>오늘의 기분과 짧은 메모를 부담 없이 남깁니다.</span></li>
+          <li><strong>오늘 할 일</strong><span>할 일을 빠르게 추가하고 완료 여부를 확인합니다.</span></li>
+          <li><strong>반복 할 일</strong><span>매일 반복되는 일상을 다시 적는 번거로움을 줄입니다.</span></li>
+          <li><strong>날짜별 기록</strong><span>캘린더에서 내가 남긴 기록과 활동을 돌아봅니다.</span></li>
+          <li><strong>다양한 계획</strong><span>체크리스트, 칸반, 시간표, 쇼핑 목록을 목적에 맞게 관리합니다.</span></li>
+          <li><strong>홈과 위젯</strong><span>자주 보는 정보와 오늘의 흐름을 더 빠르게 확인합니다.</span></li>
+        </ul>
+
+        <p class="closing">
+          Haru는 거창한 목표보다 오늘을 놓치지 않기 위해 만든 앱입니다. 기록과 할 일 관리가
+          부담스럽지 않고 하루를 자연스럽게 돌아볼 수 있는 경험을 지향합니다.
+        </p>
+      </section>
+
+      <footer>
+        <p>© 2026 아크블랙</p>
+        <p>문의: <a href="mailto:arcblack.app@gmail.com">arcblack.app@gmail.com</a></p>
+      </footer>
+    </main>
+  </body>
+</html>
